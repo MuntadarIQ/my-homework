@@ -1,0 +1,3 @@
+The Caesar cipher is one of the oldest methods used in encryption. It is named after the Roman general Julius Caesar, who used it to protect his messages and military correspondence from falling into enemy hands.
+
+The cipher is based on replacing each letter in the text with another letter that comes a certain number of letters after it in the alphabet. For example, if we decided to move each letter three spaces, the letter A would become D, B would become E, and so on. If we reached the end of the letters, we would return to the beginning, for example, Z would become C.
