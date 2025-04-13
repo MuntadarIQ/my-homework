@@ -1,0 +1,22 @@
+def caesar_cipher(text, shift, mode):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            if mode == 'encrypt':
+                result += chr((ord(char) - base + shift) % 26 + base)
+            elif mode == 'decrypt':
+                result += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            result += char
+    return result
+
+# واجهة المستخدم
+print("=== Caesar Cipher ===")
+mode = input("اختر العملية (encrypt أو decrypt): ").strip().lower()
+text = input("أدخل النص: ")
+shift = int(input("أدخل مقدار الإزاحة (shift): "))
+
+# تنفيذ العملية
+output = caesar_cipher(text, shift, mode)
+print("النتيجة:", output)
